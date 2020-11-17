@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Screen elements that can render outside the overscan safe area go here -->
+
+    <!-- Nested RelativeLayout with overscan-safe margin -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="27dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+           android:text="click me" />
+
+        <!-- Screen elements that need to be within the overscan safe area go here -->
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:autoPlay="false"
+            app:showFullScreenButton="true" />
+    </LinearLayout>
+</RelativeLayout>

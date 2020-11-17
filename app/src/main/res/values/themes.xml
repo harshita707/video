@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.VideoPlayer" parent="@style/Theme.Leanback" />
+</resources>
